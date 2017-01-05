@@ -1,0 +1,8 @@
+[feature name=test-launchpad]
+
+[artifacts]
+  org.apache.sling/org.apache.sling.launchpad//slingfeature/slingfeature
+
+[artifacts startLevel=20]
+  de.pro-vision.slingtest/de.pro-vision.slingtest.fsresource-include.application
+  de.pro-vision.slingtest/de.pro-vision.slingtest.fsresource-include.sample-content

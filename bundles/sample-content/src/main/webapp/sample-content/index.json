@@ -1,0 +1,5 @@
+{
+  "jcr:primaryType": "sling:OrderedFolder",
+  "sling:resourceType": "/apps/fsresource-include/components/index",
+  "jcr:title": "Sling Conference Demo"
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.pro-vision.slingtest</groupId>
+    <artifactId>de.pro-vision.slingtest.fsresource-include.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent>
+
+  <groupId>de.pro-vision.slingtest</groupId>
+  <artifactId>de.pro-vision.slingtest.fsresource-include.launchpad</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>slingstart</packaging>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <version>9-SNAPSHOT</version>
+      <artifactId>org.apache.sling.launchpad</artifactId>
+      <type>slingfeature</type>
+      <classifier>slingfeature</classifier>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>de.pro-vision.slingtest</groupId>
+      <artifactId>de.pro-vision.slingtest.fsresource-include.application</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>de.pro-vision.slingtest</groupId>
+      <artifactId>de.pro-vision.slingtest.fsresource-include.sample-content</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>slingstart-maven-plugin</artifactId>
+        <version>1.7.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <usePomDependencies>true</usePomDependencies>
+          <keepLaunchpadRunning>true</keepLaunchpadRunning>
+          <servers>
+            <server>
+              <port>8080</port>
+              <!-- This enables opens a debug port on 8000 to enable debugging in eclipse -->
+              <!--
+              <debug>true</debug>
+              -->
+            </server>
+          </servers>
+        </configuration>
+      </plugin>
+
+      <!-- Do not generate eclipse project files -->
+      <plugin>
+        <groupId>io.wcm.devops.maven.plugins</groupId>
+        <artifactId>eclipse-maven-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <!-- do not deploy this hierarchy pom into maven repository -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>
