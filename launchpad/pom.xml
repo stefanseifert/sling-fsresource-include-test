@@ -55,9 +55,7 @@
             <server>
               <port>8080</port>
               <!-- This enables opens a debug port on 8000 to enable debugging in eclipse -->
-              <!--
               <debug>true</debug>
-              -->
             </server>
           </servers>
         </configuration>
