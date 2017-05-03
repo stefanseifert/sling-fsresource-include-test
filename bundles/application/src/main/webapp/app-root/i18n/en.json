@@ -1,0 +1,10 @@
+{
+  "jcr:primaryType": "nt:folder",
+  "jcr:mixinTypes": [ "mix:language" ],
+  "jcr:language": "en",
+  "pro-vision.slingtest.key1": {
+    "jcr:primaryType": "nt:folder",
+    "jcr:mixinTypes": [ "sling:Message" ],
+    "sling:message": "i18n Test Message (en)"
+  }
+}
