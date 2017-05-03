@@ -26,7 +26,8 @@
 
             <!-- include application path as intial content -->
             <Sling-Initial-Content>
-              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/fsresource-include
+              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/fsresource-include,
+              SLING-INF/app-i18n;overwrite:=true;ignoreImportProviders:="xml,json";path:=/apps/fsresource-include/i18n
             </Sling-Initial-Content>
 
           </instructions>
