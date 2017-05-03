@@ -13,10 +13,9 @@ Call application without fsresource provider
 * After starting launchpad open URL http://localhost:8080/content/index.html
 * It shows a text 'This fragment is included from common/fragment.html.' which is included via data-sly-include
 
-Call application without fsresource provider
+Call application with fsresource provider
 --------------------------------------------
 
 * Mount the application path of `bundles/application` in the repository to the local filesystem via fsresource e.g. via
   `mvn sling:fsmount'
 * Open URL http://localhost:8080/content/index.html
-* Throws an error because fragment.html is not found (because `sling:resourceSuperType` property is not found)
