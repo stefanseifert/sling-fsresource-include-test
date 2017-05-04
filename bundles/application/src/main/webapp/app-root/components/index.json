@@ -1,3 +1,3 @@
 {
-  "sling:resourceSuperType": "/apps/fsresource-include/components/commonxxx^x"
+  "sling:resourceSuperType": "/apps/fsresource-include/components/common"
 }
