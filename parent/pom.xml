@@ -22,7 +22,7 @@
     <build.compiler.target>1.8</build.compiler.target>
 
     <!-- Default URL for launchpad -->
-    <sling.url>http://localhost:8081</sling.url>
+    <sling.url>http://localhost:8080</sling.url>
 
   </properties>
 
